@@ -1,0 +1,128 @@
+{
+  "metadata": {
+    "Testador": "Mateus Toré",
+    "Versão": "V_1",
+    "Sistema": "https://front.serverest.dev/login",
+    "Ambiente": "Google Chrome | Brave | FireFox"
+  },
+  "total_casos": 9,
+  "casos_de_teste": [
+    {
+      "IDº CT": "CT_LOGIN_1",
+      "Título do Teste": "Campos Vazios",
+      "Cenario do Teste": "Validar se o sistema bloqueia campos vazios e não permite login sem dados.",
+      "Prioridade": "Alta",
+      "Pré-Condições": "Estar na Página de Login; \nCampo de Login e Senha estar em branco",
+      "Dados de entrada": "N/A",
+      "Nº Passos": 3,
+      "Passos (BDD & Gherkin)": "Dado que o usuário esteja na página de login\nQuando deixar os campos de e-mail e senha vazios.\nE clicar no botão de Login.\n ",
+      "Resultado Esperado": "Então o usuário receberá a mensagem: Email é obrigatório e Password é obrigatório",
+      "Critério de Aceite": "Resposta obtida :\nEmail é obrigatório;\nPassword é obrigatório",
+      "Status": "Aprovado"
+    },
+    {
+      "IDº CT": "CT_LOGIN_2",
+      "Título do Teste": "E-mail Válido e Senha Inválida",
+      "Cenario do Teste": "Validar se o sistema permite login com senha incorreta.",
+      "Prioridade": "Alta",
+      "Pré-Condições": "Estar na Página de Login",
+      "Dados de entrada": "E-mail : gdnteste@qa.com\nSenha : senhaincorretateste",
+      "Nº Passos": 4,
+      "Passos (BDD & Gherkin)": "Dado que o usuário esteja na página de login\nQuando Inserir um e-mail válido.\nE Inserir uma senha incorreta.\nE Clicar no botão de Login.\n",
+      "Resultado Esperado": "Então o usuário receberá a mensagem: Email e/ou senha inválidos",
+      "Critério de Aceite": "Resposta obtida : \nEmail e/ou senha inválidos",
+      "Status": "Aprovado"
+    },
+    {
+      "IDº CT": "CT_LOGIN_3",
+      "Título do Teste": "E-mail Inválido e Senha Válida",
+      "Cenario do Teste": "Validar se o sistema permite login com formato do e-mail incorreto sem o \"@\"",
+      "Prioridade": "Alta",
+      "Pré-Condições": "Estar na Página de Login",
+      "Dados de entrada": "E-mail : gdntesteqa.com\nSenha : gdnteste\n",
+      "Nº Passos": 4,
+      "Passos (BDD & Gherkin)": "Dado que o usuário esteja na página de login\nQuando Inserir um e-mail sem o \"@\"\nE Inserir uma senha correta.\nE Clicar no botão de Login.",
+      "Resultado Esperado": "Então o usuário receberá a mensagem: Inclua um \"@\" no endereço de e-mail, \"gdnqateste.com\" está com um \"@\" faltando",
+      "Critério de Aceite": "Resposta obtida :\nInclua um \"@\" no endereço de e-mail, \"gdnqateste.com\" está com um \"@\" faltando",
+      "Status": "Aprovado"
+    },
+    {
+      "IDº CT": "CT_LOGIN_4",
+      "Título do Teste": "Ambos Válidos",
+      "Cenario do Teste": "Validar se o sistema permite login quando as credenciais estão corretas.",
+      "Prioridade": "Alta",
+      "Pré-Condições": "Estar na Página de Login;\nPossuir um cadastro válido",
+      "Dados de entrada": "E-mail : gdnteste@qa.com\nSenha : gdnteste",
+      "Nº Passos": 4,
+      "Passos (BDD & Gherkin)": "Dado que o usuário esteja na página de login\nQuando Inserir um e-mail correto\nE Inserir uma senha correta.\nE Clicar no botão de Login.",
+      "Resultado Esperado": "Então o usuário o usuário será redirecionado para a página principal",
+      "Critério de Aceite": "Resposta obtida :\nValidação aceita;\nVisualização da página principal",
+      "Status": "Aprovado"
+    },
+    {
+      "IDº CT": "CT_LOGIN_5",
+      "Título do Teste": "O botão \"Entrar\" Visível",
+      "Cenario do Teste": "O botão \"Entrar\" só será habilitado após o preenchimento dos campos.",
+      "Prioridade": "Alta",
+      "Pré-Condições": "Estar na Página de Login",
+      "Dados de entrada": "N/A",
+      "Nº Passos": 3,
+      "Passos (BDD & Gherkin)": "Dado que o usuário esteja na página de login\nE Não inserir o e-mail.\nE Não inserir a senha.",
+      "Resultado Esperado": "Então botão de \"Entrar\" não pode estar visível",
+      "Critério de Aceite": "Resposta obtida :\nBotão visível mesmo sem as informações",
+      "Status": "Aprovado"
+    },
+    {
+      "IDº CT": "CT_LOGIN_6",
+      "Título do Teste": "Cadastre-se",
+      "Cenario do Teste": "Validar se o sistema permite realiza o redirecionamento para a página de cadastro",
+      "Prioridade": "Alta",
+      "Pré-Condições": "Estar na Página de Login",
+      "Dados de entrada": "N/A",
+      "Nº Passos": 2,
+      "Passos (BDD & Gherkin)": "Dado que o usuário esteja na página de login\nQuando Clicar no botão \"Cadastre-se\"",
+      "Resultado Esperado": "Então o usuário o usuário será redirecionado para a página de cadastrar usuários: https://front.serverest.dev/cadastrarusuarios ",
+      "Critério de Aceite": "Resposta obtida :\nVisualização da página de cadastros",
+      "Status": "Aprovado"
+    },
+    {
+      "IDº CT": 7,
+      "Título do Teste": "",
+      "Cenario do Teste": "",
+      "Prioridade": "",
+      "Pré-Condições": "",
+      "Dados de entrada": "",
+      "Nº Passos": "",
+      "Passos (BDD & Gherkin)": "",
+      "Resultado Esperado": "",
+      "Critério de Aceite": "",
+      "Status": ""
+    },
+    {
+      "IDº CT": 8,
+      "Título do Teste": "",
+      "Cenario do Teste": "",
+      "Prioridade": "",
+      "Pré-Condições": "",
+      "Dados de entrada": "",
+      "Nº Passos": "",
+      "Passos (BDD & Gherkin)": "",
+      "Resultado Esperado": "",
+      "Critério de Aceite": "",
+      "Status": ""
+    },
+    {
+      "IDº CT": 9,
+      "Título do Teste": "",
+      "Cenario do Teste": "",
+      "Prioridade": "",
+      "Pré-Condições": "",
+      "Dados de entrada": "",
+      "Nº Passos": "",
+      "Passos (BDD & Gherkin)": "",
+      "Resultado Esperado": "",
+      "Critério de Aceite": "",
+      "Status": ""
+    }
+  ]
+}
