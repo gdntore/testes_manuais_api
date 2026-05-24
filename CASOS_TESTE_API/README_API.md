@@ -59,6 +59,7 @@ Casos de teste para validação da API REST pública [ServeRest](https://servere
 |---|---|
 | `CT_API.json` | Casos de teste completos em formato JSON |
 | `CT_API.xlsx` | Casos de teste em formato Excel |
+| `SERVEREST_API_TESTE.postman_collection` | Postman_Collection |
 
 ---
 
