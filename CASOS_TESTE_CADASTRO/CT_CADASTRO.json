@@ -1,0 +1,128 @@
+{
+  "metadata": {
+    "Testador": "Mateus Toré",
+    "Versão": "V_1",
+    "Sistema": "https://front.serverest.dev/cadastrarusuarios",
+    "Ambiente": "Google Chrome | Brave | Firefox"
+  },
+  "total_casos": 9,
+  "casos_de_teste": [
+    {
+      "IDº CT": "CT_CADASTRO_1",
+      "Título do Teste": "Cadastrar com todos os campos vazio",
+      "Cenario do Teste": "Validar se o sistema permite o cadastro vazio",
+      "Prioridade": "Alta",
+      "Pré-Condições": "Estar na página de cadastro \"https://front.serverest.dev/cadastrarusuarios\"; \nDeixar os campos \"Nome\", \"E-mail\" e \"Senha\", vazio.",
+      "Dados de Entrada": "N/A",
+      "Nº Passos": 3,
+      "Passos (BDD & Gherkin)": "Dado que está na página de cadastro.\nQuando os campos \"Nome\", \"E-mail\", \"Senha\", estiverem vazio.\nE clicar em \"Cadastrar\".\n ",
+      "Resultado Esperado": "Então o usuário recebe uma mensagem informando que os campos são obrigatórios.",
+      "Critério de Aceite": "Resposta obtida :\nCadastro não efetuado;\nCampos obrigatórios.",
+      "Status": "Aprovado"
+    },
+    {
+      "IDº CT": "CT_CADASTRO_2",
+      "Título do Teste": "Cadastrar com o campo nome vazio",
+      "Cenario do Teste": "Validar se o sistema permite o cadastro com nome vazio",
+      "Prioridade": "Alta",
+      "Pré-Condições": "Estar na página de cadastro \"https://front.serverest.dev/cadastrarusuarios\"; \nDeixar os campos \"Nome\", vazio.",
+      "Dados de Entrada": "E-mail : gdnteste@qa.com\nSenha : gdnteste",
+      "Nº Passos": 3,
+      "Passos (BDD & Gherkin)": "Dado que está na página de cadastro.\nQuando o campo \"Nome\", estiver vazio.\nE clicar em \"Cadastrar\".\n ",
+      "Resultado Esperado": "Então o usuário recebe uma mensagem informando que o campo \"Nome\" é obrigatório.",
+      "Critério de Aceite": "Resposta obtida :\nCadastro não efetuado;\nCampo \"Nome\" obrigatório.",
+      "Status": "Aprovado"
+    },
+    {
+      "IDº CT": "CT_CADASTRO_3",
+      "Título do Teste": "Cadastrar com o campo senha vazio",
+      "Cenario do Teste": "Validar se o sistema permite o cadastro com senha vazio",
+      "Prioridade": "Alta",
+      "Pré-Condições": "Estar na página de cadastro \"https://front.serverest.dev/cadastrarusuarios\"; \nDeixar os campos \"Senha\", vazio.",
+      "Dados de Entrada": "Nome : gdn teste\nE-mail : gdnteste@qa.com",
+      "Nº Passos": 3,
+      "Passos (BDD & Gherkin)": "Dado que está na página de cadastro.\nQuando o campo \"Senha\", estiver vazio.\nE clicar em \"Cadastrar\".\n ",
+      "Resultado Esperado": "Então o usuário recebe uma mensagem informando que o campo \"Senha\" é obrigatório.",
+      "Critério de Aceite": "Resposta obtida :\nCadastro não efetuado;\nCampo \"Senha\" obrigatório.",
+      "Status": "Aprovado"
+    },
+    {
+      "IDº CT": "CT_CADASTRO_4",
+      "Título do Teste": "Cadastrar com o campo e-mail vazio",
+      "Cenario do Teste": "Validar se o sistema permite o cadastro com E-mail vazio",
+      "Prioridade": "Alta",
+      "Pré-Condições": "Estar na página de cadastro \"https://front.serverest.dev/cadastrarusuarios\"; \nDeixar os campos \"E-mail\", vazio.",
+      "Dados de Entrada": "Nome : gdn teste\nSenha : gdnteste",
+      "Nº Passos": 3,
+      "Passos (BDD & Gherkin)": "Dado que está na página de cadastro.\nQuando o campo \"E-mail\", estiver vazio.\nE clicar em \"Cadastrar\".\n ",
+      "Resultado Esperado": "Então o usuário recebe uma mensagem informando que o campo \"E-mail\" é obrigatório.",
+      "Critério de Aceite": "Resposta obtida :\nCadastro não efetuado;\nCampo \"E-mail\" obrigatório.",
+      "Status": "Aprovado"
+    },
+    {
+      "IDº CT": "CT_CADASTRO_5",
+      "Título do Teste": "Cadastrar com o formato do E-mail errado",
+      "Cenario do Teste": "Validar se o sistema permite o cadastro com o formato do E-mail incorreto",
+      "Prioridade": "Alta",
+      "Pré-Condições": "Estar na página de cadastro \"https://front.serverest.dev/cadastrarusuarios\"; \nPreencher corretamente o campo \"Nome\" e \"Senha\";\nPreencher o campo \"E-mail\" sem utilizar \"@\"",
+      "Dados de Entrada": "Nome : gdn teste\nSenha : gdnteste\nE-mail : gdntesteqa.com",
+      "Nº Passos": 4,
+      "Passos (BDD & Gherkin)": "Dado que o usuário esteja na página de login\nE inserir o nome.\nE a senha.\nE o E-mail sem utilizar \"@\"",
+      "Resultado Esperado": "Então o usuário recebe uma mensagem informando que o formato do e-mail não esta correto.",
+      "Critério de Aceite": "Resposta obtida :\nBotão visível mesmo sem as informações",
+      "Status": "Aprovado"
+    },
+    {
+      "IDº CT": "CT_CADASTRO_6",
+      "Título do Teste": "Cadastro já existente",
+      "Cenario do Teste": "Validar se o sistema permite realiza outro cadastro com as mesmas informações",
+      "Prioridade": "Alta",
+      "Pré-Condições": "Estar na página de cadastro \"https://front.serverest.dev/cadastrarusuarios\"; \nPreencher os campos com as informações de um usuário já cadastrado.",
+      "Dados de Entrada": "Nome : gdn teste\nE-mail : gdnteste@qa.com\nSenha : gdnteste",
+      "Nº Passos": 2,
+      "Passos (BDD & Gherkin)": "Dado que o usuário já esteja cadastrado\nQuando Clicar no botão \"Cadastre-se\"",
+      "Resultado Esperado": "Então o usuário recebe uma mensagem informando que esse cadastro já existe.",
+      "Critério de Aceite": "Resposta obtida :\nE-mail já cadastrado",
+      "Status": "Aprovado"
+    },
+    {
+      "IDº CT": 7,
+      "Título do Teste": "",
+      "Cenario do Teste": "",
+      "Prioridade": "",
+      "Pré-Condições": "",
+      "Dados de Entrada": "",
+      "Nº Passos": "",
+      "Passos (BDD & Gherkin)": "",
+      "Resultado Esperado": "",
+      "Critério de Aceite": "",
+      "Status": ""
+    },
+    {
+      "IDº CT": 8,
+      "Título do Teste": "",
+      "Cenario do Teste": "",
+      "Prioridade": "",
+      "Pré-Condições": "",
+      "Dados de Entrada": "",
+      "Nº Passos": "",
+      "Passos (BDD & Gherkin)": "",
+      "Resultado Esperado": "",
+      "Critério de Aceite": "",
+      "Status": ""
+    },
+    {
+      "IDº CT": 9,
+      "Título do Teste": "",
+      "Cenario do Teste": "",
+      "Prioridade": "",
+      "Pré-Condições": "",
+      "Dados de Entrada": "",
+      "Nº Passos": "",
+      "Passos (BDD & Gherkin)": "",
+      "Resultado Esperado": "",
+      "Critério de Aceite": "",
+      "Status": ""
+    }
+  ]
+}
